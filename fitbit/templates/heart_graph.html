@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心拍数グラフ</title>
+</head>
+<body>
+    <h1>グラフ表示</h1>
+    <form method="POST">
+        <label for="start_date">開始日</label>
+        <input type="date" id="start_date" name="start_date" value="{{start_date}}">
+        <label for="end_date">開始日</label>
+        <input type="date" id="end_date" name="end_date" value="{{end_date}}">
+        <button type="submit">表示</button>
+    </form>
+    <br>
+    <img src = "data:image/png;base64,{{graph_url}}" alt="Graph">
+
+        
+</body>
+</html>

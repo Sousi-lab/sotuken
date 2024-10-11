@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="card w-50 mb-3" style="margin: auto;">
+    <div class="card-body">
+        <h2 class="card-title">心拍数
+        {%if heart_sec is not none %}
+            {{heart_sec}}bpm
+        {% else %}
+            データなし
+        {% endif %}
+        </h2>
+        <a class="btn btn-secondary" href="/heart" role="button">心拍数データ</a>
+    </div>
+</div>
+<div class="card w-50 mb-3" style="margin: auto;">
+    <div class="card-body">
+        <h2 class="card-title">アクティビティ</h2> 
+        <a class="btn btn-secondary" href="/steps_plot" role="button">アクティビティデータ</a>
+    </div>
+</div>
+<div class="card w-50 mb-3" style="margin: auto;">
+    <div class="card-body">
+        <h2 class="card-title">睡眠</h2> 
+        <a class="btn btn-secondary" href="/sleep_plot" role="button">睡眠データ</a>
+    </div>
+</div>
+<div class="card w-50 mb-3" style="margin: auto;">
+    <div class="card-body">
+        <h2 class="card-title">身体情報</h2> 
+        <a class="btn btn-secondary" href="/steps_plot" role="button">身体データ</a>
+    </div>
+</div>
+
+
+
+{% endblock %}
